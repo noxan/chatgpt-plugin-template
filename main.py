@@ -9,7 +9,7 @@ app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["https://chat.openai.com"])
 
 
-@app.get("/.well-known/ai-plugin.json")
+@app.get("/.well-known/ai-plugin.json", include_in_schema=False)
 def plugin_manifest():
     return JSONResponse(
         {

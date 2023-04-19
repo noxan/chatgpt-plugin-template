@@ -42,3 +42,9 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 
 app.mount("/", StaticFiles(directory="public"), name="static")
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("main:app", reload=True)

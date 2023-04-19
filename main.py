@@ -18,7 +18,7 @@ def plugin_manifest():
         {
             "schema_version": "v1",
             "name_for_human": "ChatGPT plugin template",
-            "name_for_model": "chagpt plugin template",
+            "name_for_model": "template",
             "description_for_human": "Template to build awesome ChatGPT plugins.",
             "description_for_model": "Template to build awesome ChatGPT plugins.",
             "auth": {"type": "none"},

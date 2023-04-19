@@ -32,7 +32,7 @@ Or alternatively if you have the virtual environment enabled.
 python main.py
 ```
 
-If everything works you can view the plugin manifest in your browser at [http://127.0.0.1:8000/.well-known/ai-plugin.json](http://127.0.0.1:8000/.well-known/ai-plugin.json).
+If everything works you can view the plugin manifest in your browser at [http://localhost:8000/.well-known/ai-plugin.json](http://localhost:8000/.well-known/ai-plugin.json).
 
 
 ## Installation
@@ -48,9 +48,9 @@ Tip: You can enable the plugin devtools in the bottom left `Settings` menu item.
 
 ## API documentation and specification
 
-The api documentation is automatically generated from your code. You can view the documentation by visiting [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser.
+The api documentation is automatically generated from your code. You can view the documentation by visiting [http://localhost:8000/docs](http://localhost:8000/docs) in your browser.
 
-The api specifications are automatically generated based on your code. You can view the specifications by visiting [http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json) in your browser.
+The api specifications are automatically generated based on your code. You can view the specifications by visiting [http://localhost:8000/openapi.json](http://localhost:8000/openapi.json) in your browser.
 
 
 ## ChatGTP plugin documentation

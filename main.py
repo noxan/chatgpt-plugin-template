@@ -2,9 +2,14 @@ from typing import Union
 
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://chat.openai.com"],
+)
 
 
 @app.get("/.well-known/ai-plugin.json")

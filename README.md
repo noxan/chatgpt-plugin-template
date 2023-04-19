@@ -12,9 +12,9 @@ THE template to create ChatGPT plugins.
 2. Continuous integration (Github Actions)
 3. ...
 
-## Installation
+## Development
 
-To get started with the template, clone the repository and run the setup script.
+To get started with development on your computer run the setup script.
 
 ```bash
 ./scripts/setup.sh
@@ -26,13 +26,25 @@ You can start a local development server with the following command.
 ./scripts/run.sh
 ```
 
-Or alternatively if you have virtual environment enabled.
+Or alternatively if you have the virtual environment enabled.
 
 ```bash
 python main.py
 ```
 
 If everything works you can view the plugin manifest in your browser at [http://127.0.0.1:8000/.well-known/ai-plugin.json](http://127.0.0.1:8000/.well-known/ai-plugin.json).
+
+
+## Installation
+
+1. Open [ChatGPT](https://chat.openai.com/) in your browser (requires [plugin access](https://openai.com/waitlist/plugins))
+2. In the top central `Model` dropdown select `Plugins (ALPHA)` (if you do not see this option you do not have plugin access yet)
+3. Click the `Plugins` dropdown on the right and select `Plugin store`, which opens a popup
+4. Select `Develop your own plugin` on the bottom left
+5. Enter `localhost:8000` in the `Domain` field and click `Find manifest file`
+
+Tip: You can enable the plugin devtools in the bottom left `Settings` menu item.
+
 
 ## Documentation
 

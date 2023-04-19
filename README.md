@@ -1,6 +1,16 @@
-# chatgpt-plugin-template
+# ChatGPT plugin template
 
-The template for creating ChatGPT plugins with automatic api documentation.
+THE template to create ChatGPT plugins.
+
+1. Automatic API specification generation ✨ (powered by [FastAPI](https://fastapi.tiangolo.com))
+2. Ready to use 🚀 (works out of the box)
+3. All in one `main.py` file 📄 (keeps things simple and clean)
+
+## Coming soon
+
+1. Deployment (let me know which providers you use)
+2. Continuous integration (Github Actions)
+3. ...
 
 ## Installation
 

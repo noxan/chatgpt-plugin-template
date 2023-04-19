@@ -1,8 +1,32 @@
 from typing import Union
 
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
+
+
+
+@app.get("/.well-known/ai-plugin.json")
+def plugin_manifest():
+    return JSONResponse(
+        {
+            "schema_version": "v1",
+            "name_for_human": "TODO Plugin (no auth)",
+            "name_for_model": "todo",
+            "description_for_human": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
+            "description_for_model": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
+            "auth": {"type": "none"},
+            "api": {
+                "type": "openapi",
+                "url": "http://localhost:8000/openapi.yaml",
+                "is_user_authenticated": False,
+            },
+            "logo_url": "http://localhost:8000/logo.png",
+            "contact_email": "legal@example.com",
+            "legal_info_url": "http://example.com/legal",
+        }
+    )
 
 
 @app.get("/")

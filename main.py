@@ -17,10 +17,10 @@ def plugin_manifest():
     return JSONResponse(
         {
             "schema_version": "v1",
-            "name_for_human": "TODO Plugin (no auth)",
-            "name_for_model": "todo",
-            "description_for_human": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
-            "description_for_model": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
+            "name_for_human": "ChatGPT plugin template",
+            "name_for_model": "chagpt plugin template",
+            "description_for_human": "Template to build awesome ChatGPT plugins.",
+            "description_for_model": "Template to build awesome ChatGPT plugins.",
             "auth": {"type": "none"},
             "api": {
                 "type": "openapi",

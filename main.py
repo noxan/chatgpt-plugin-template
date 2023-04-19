@@ -1,9 +1,9 @@
 from typing import Union
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["https://chat.openai.com"])

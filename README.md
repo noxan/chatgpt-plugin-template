@@ -16,6 +16,12 @@ You can start a local development server with the following command.
 ./scripts/run.sh
 ```
 
+Or alternatively if you have virtual environment enabled.
+
+```bash
+python main.py
+```
+
 If everything works you can view the plugin manifest in your browser at [http://127.0.0.1:8000/.well-known/ai-plugin.json](http://127.0.0.1:8000/.well-known/ai-plugin.json).
 
 ## Documentation

@@ -48,7 +48,7 @@ class Payload(BaseModel):
 
 
 @app.post("/wikipedia")
-def wikipedia_post(payload: Payload):
+def wikipedia(payload: Payload):
     response = requests.get(
         "https://en.wikipedia.org/w/api.php",
         params={

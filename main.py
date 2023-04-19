@@ -1,12 +1,19 @@
-from typing import Union
+import requests
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
 
 app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["https://chat.openai.com"])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://chat.openai.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/.well-known/ai-plugin.json", include_in_schema=False)
@@ -36,9 +43,13 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+class Payload(BaseModel):
+    query: str
+
+
+@app.get("/search")
+def read_item(payload: Payload):
+    return {"query": payload.query}
 
 
 app.mount("/", StaticFiles(directory="public"), name="static")

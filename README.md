@@ -27,3 +27,7 @@ If everything works you can view the plugin manifest in your browser at [http://
 ## Documentation
 
 The api documentation is automatically generated from your code. You can view the documentation by visiting [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser.
+
+## Inspiration
+
+This plugin template is inspired by the official [ChatGPT plugin example](https://github.com/openai/plugins-quickstart).

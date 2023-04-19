@@ -24,7 +24,7 @@ def plugin_manifest():
             "auth": {"type": "none"},
             "api": {
                 "type": "openapi",
-                "url": "http://localhost:8000/openapi.yaml",
+                "url": "http://localhost:8000/openapi.json",
                 "is_user_authenticated": False,
             },
             "logo_url": "http://localhost:8000/logo.png",

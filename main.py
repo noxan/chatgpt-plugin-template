@@ -47,9 +47,22 @@ class Payload(BaseModel):
     query: str
 
 
-@app.get("/search")
-def read_item(payload: Payload):
-    return {"query": payload.query}
+@app.post("/wikipedia")
+def wikipedia_post(payload: Payload):
+    response = requests.get(
+        "https://en.wikipedia.org/w/api.php",
+        params={
+            "action": "query",
+            "format": "json",
+            "titles": payload.query,
+            "prop": "extracts",
+            "redirects": True,
+            "exintro": True,
+            "explaintext": True,
+        },
+    ).json()
+    page = next(iter(response["query"]["pages"].values()))
+    return JSONResponse({"result": page["extract"]})
 
 
 app.mount("/", StaticFiles(directory="public"), name="static")
